@@ -31,3 +31,19 @@ body {
 .btn-primary:hover {
     background-color: #0b5ed7;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* تأثير دخول ناعم */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
