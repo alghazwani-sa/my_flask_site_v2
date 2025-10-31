@@ -1,32 +1,49 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <title>الصفحة الرئيسية | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask Site</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
-    <header>
-        <h1>مرحبًا بكم في موقعي | Welcome to My Website</h1>
-        <nav>
-            <a href="/">الرئيسية | Home</a>
-            <a href="/about">من أنا | About</a>
-            <a href="/contact">تواصل | Contact</a>
-            <a href="/privacy">سياسة الخصوصية | Privacy</a>
-        </nav>
-    </header>
 
-    <section>
-        <h2>نبذة | About</h2>
-        <p>هذا موقع تجريبي تم إنشاؤه باستخدام لغة Python وإطار Flask.</p>
-        <p>This is a sample website built using Python and Flask framework.</p>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/">My Flask Site</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/privacy">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center text-center text-light">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Welcome to My Flask Site</h1>
+            <p class="lead mb-4">A simple and elegant Flask web app powered by Bootstrap 5</p>
+            <a href="/about" class="btn btn-primary btn-lg">Learn More</a>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2025 جميع الحقوق محفوظة | All Rights Reserved</p>
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center py-3 mt-5">
+        <p class="mb-0">&copy; 2025 My Flask Site | Built with Flask & Bootstrap</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
